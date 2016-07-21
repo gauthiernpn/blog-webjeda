@@ -1,0 +1,21 @@
+<script>
+var disqus_loaded = false;
+
+function load_disqus()
+{
+  disqus_loaded = true;
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = "http://webjeda.disqus.com/embed.js";
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  var ldr = document.getElementById('disqus_loader');
+  ldr.parentNode.removeChild(ldr);
+
+}
+
+window.onscroll = function(e) {
+    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+
+        if (disqus_loaded==false){ load_disqus() };
+    }
+};
+</script> 

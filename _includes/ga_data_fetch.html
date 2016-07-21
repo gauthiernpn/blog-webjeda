@@ -1,0 +1,4 @@
+<script>
+    var jqxhr=$.ajax("{{ site.super-proxy }}").done(function(b){if(void 0!==b){var c=void 0,a=void 0,d={},a=b.totalsForAllResults["ga:pageviews"];void 0!==a&&null!==a&&$("#ga-totalpageviews-div")&&$("#ga-totalpageviews").html("Views: "+a);void 0!==b.rows&&(jQuery.each(b.rows,function(b,a){var e=a[0];"{{ page.url }}"===e&&(c=a[1],void 0!==c&&null!==c&&$("#ga-pageviews-div")&&$("#ga-pageviews").html("Views: "+c));d[e]=a[3]}),$("span[data-post-url]").each(function(a){a=$(this).attr("data-post-url");void 0!==
+d[a]&&null!==d[a]&&$(this).html("Views: "+d[a])}))}}).fail(function(b){console.log("Failed to get GA data")});
+</script>

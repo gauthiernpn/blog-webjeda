@@ -1,0 +1,34 @@
+---
+layout: compress
+---
+<!DOCTYPE html>
+<html lang="en">
+          {% include head.html %}
+    <body>
+
+    <noscript>
+            <div style="position: fixed; top: 0px; left: 0px; z-index: 3000; 
+                        height: 100%; width: 100%; background-color: #FFFFFF">
+                <p style="position:absolute; top: 50%; left:30%">JavaScript is not enabled on your browser.</p>
+            </div>
+    </noscript>
+            
+            
+            
+             <div id="top"></div>
+            {% include header.html %}
+                {{ content }}         
+             {% include footer-1.html %}
+
+
+
+<script async="async" src="/js/css-def.js"></script>
+{% if site.analytics == 'no' %}{% else %}
+ {% include analytics.html %}
+{% endif %}
+{% if site.ad == 'no' %}{% else %}
+ <script>window.onload=function(){setTimeout(function(){var a=document.querySelector("ins.adsbygoogle");a&&0==a.innerHTML.replace(/\s/g,"").length&&(a.style.cssText="display:block !important; visibility:visible !important;text-decoration:none !important;font-family: 'wj';font-size: 1.25em; margin-top: 2em",a.innerHTML="<p>I notice that you're using an <strong>ad-blocker</strong>. That's cool, you want a fast and clean experience but let's imagine you eat at a restaurant. Don't you pay for the meal?</p><p>I really appreciate if you could <strong>whitelist my website</strong>. Every resource on this website is free but ads are the only means I get paid for the hard work. I promise that they are <strong>not annoying</strong>.</p><img alt='whitelist' src='/img/whitelist.png'><p>To read the article, refresh the page once you whitelist.</p>")},
+2000)};</script>
+ {% endif %}
+  </body>
+</html>

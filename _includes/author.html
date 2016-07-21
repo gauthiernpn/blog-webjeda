@@ -1,0 +1,20 @@
+{% assign author = site.authors[page.author] %}
+  
+   <div class="w3-card-2">
+        <div id="author-content">
+                    <h4 class="author-head">Author</h4>
+            <div id="name-author" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">{{ author.display_name }}</span><br /></div>
+                    <img alt="sharathdt" itemprop="photo" id="image-author" class="left" src="{{ author.gravatar }}">
+                    <div id="about-author">{{ author.about }}</div>
+                    <div id="social-author"> 
+                                            <a href="{{ author.facebook }}" ><i class="fa fa-facebook-square fa"></i></a>
+                                            <a href="{{ author.twitter }}" ><i class="fa fa-twitter-square fa"></i></a>
+                                            <a href="{{ author.github}}" ><i class="fa fa-github-square fa"></i></a>
+                                            <a href="{{ author.email }}" ><i class="fa fa-envelope-square fa"></i></a>
+                                    </div>
+        </div>
+    </div>
+        
+        
+        
+         

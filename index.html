@@ -1,0 +1,68 @@
+---
+layout: default
+---
+<div class="news">
+    <a href="/jekyll-themes/gatok/" target="_blank">
+        <img class="news-img" src="/thumbs/webjeda-gatok-jekyll-theme-news.PNG" alt="webjeda gatok theme">
+    </a>
+</div>
+
+ <div id="mainbox">
+     {% for post in paginator.posts %} 
+       <a class="post-link-index" href="{{ post.url | prepend: site.baseurl }}">
+          <div class="card">
+                <img alt="{{ post.title }}" class="post-image-index" itemprop="thumbnailUrl" src="/thumbs-small/{{ post.image }}" width="300" height="auto" />
+                
+                
+                <div class="card-footer">
+                    <h6 class="post-index-title">{{ post.title }}</h6>
+                     <div class="home-tag" style="background-color: {% cycle '#e74c3c', '#1abc9c', '#e67e22', '#34495e', '#f1c40f', '#3498db', '#2ecc71', '#9b59b6' %}">{{ post.tags | first | strip }}</div>
+                    <p class="post-excerpt">{{ post.desc | truncate: 160 }}</p>
+               </div>
+           
+        </div> 
+     </a>
+      {% endfor %}   
+    </div>
+
+{% if paginator.total_pages > 1 %}
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a class="navi" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
+  {% else %}
+    <span class="navi" >&laquo; Prev</span>
+  {% endif %}
+
+  {% for page in (1..paginator.total_pages) %}
+    {% if page == paginator.page %}
+      <span class="page-num"><em>{{ page }}</em></span>
+    {% elsif page == 1 %}
+      <a class="page-num" href="{{ site.url }}">{{ page }}</a>
+    {% else %}
+      <a class="page-num" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+    {% endif %}
+  {% endfor %}
+
+  {% if paginator.next_page %}
+    <a class="navi" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
+  {% else %}
+    <span class="navi" >Next &raquo;</span>
+  {% endif %}
+</div>
+{% endif %}
+
+
+
+
+<script type="application/ld+json">
+{
+   "@context": "http://schema.org",
+   "@type": "WebSite",
+   "url": "http://blog.webjeda.com/",
+   "potentialAction": {
+     "@type": "SearchAction",
+     "target": "http://blog.webjeda.com/search/?q={search_term_string}",
+     "query-input": "required name=search_term_string"
+   }
+}
+</script>
