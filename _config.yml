@@ -8,7 +8,7 @@ twitter:
    site: webjeda
 
 logo: /img/webjeda-logo.svg
-image: {{page.image}}
+#image: {{page.image}}
 facebook: https://www.facebook.com/webjeda
 twitter: https://twitter.com/webjeda
 github: https://github.com/sharu725
