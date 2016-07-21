@@ -75,7 +75,7 @@
    
     <!-- Canonical -->
 <link rel="canonical" href="{{ page.url | prepend: site.url }}">
-{% if site.ad == 'no' %}{% else %}  
+
  {% if page.layout == 'post' %}
  
     <!--   Adsense Script  -->
@@ -84,7 +84,7 @@
      <!--   Disqus Script  --> 
     {% include disqus.html %}
 
- {% endif %}
+
 {% endif %}
   
  
