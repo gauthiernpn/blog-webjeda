@@ -1,0 +1,317 @@
+html {
+ font-family: $head-font-family;
+ text-rendering: optimizeLegibility;
+-webkit-font-smoothing: antialiased;
+ background-color: #FFF;
+ height: 100%;
+ box-sizing: border-box;
+}
+
+
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    height: 5px;
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #34495e;
+}
+::-webkit-scrollbar-track {
+    background-color: #EEE;
+}
+
+h1, h2, h3, h4, h5, h6 {
+
+  font-weight: 400;
+  color: lighten($brand-color, 10%);
+  letter-spacing: -.025rem;
+}
+
+
+/**
+ * Reset some basic elements
+ */
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.7;
+    letter-spacing: 0.3px;
+    font-family: $base-font-family;
+    color: rgba(102, 102, 102, 0.64);
+    text-shadow: 0px 0px 0.1px;
+    text-rendering: optimizeLegibility;
+    margin-bottom: 2em;
+    background: transparent;
+    
+    @include media-query($on-palm) {
+        font-size: 1.1em;
+        letter-spacing: 0px;
+        line-height: 1.5;
+        margin-bottom: 1em;
+        text-shadow: none;
+        color: $text-color;
+    }
+    
+    
+
+    
+}
+
+h1 {
+    font-size: 2.5em;
+    font-weight: 600;
+    
+}
+
+h2 {
+    font-size: 2em;
+    font-weight: 600;
+    @include media-query($on-palm) {
+         font-size: 1.3em;
+    }
+}
+
+h3 {
+    font-size: 1.5em;
+    font-weight: 600;
+    
+    @include media-query($on-palm){
+        font-size: 1.2em;
+        font-weight: 600;
+    }
+}
+
+
+h4 {
+        font-size: 1.2em;
+        font-weight: bold;
+        @include media-query($on-palm) {
+        font-size: 1em;
+        }
+    }
+/**
+ * Basic styling
+ */
+body {
+    /* font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family; */
+    color: $text-color;
+    background-color: #FFF;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-feature-settings: "kern" 1;
+    -moz-font-feature-settings: "kern" 1;
+    -o-font-feature-settings: "kern" 1;
+    font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    height: 100%;
+    margin:0;
+    padding:0;
+    border:none;
+   
+    
+}
+
+
+
+/**
+ * Set `margin-bottom` to maintain vertical rhythm
+ */
+h1, h2, h3, h4, h5, h6{
+    margin-bottom: 0.625em;
+    text-shadow: 0px 0px 0.1px;
+}
+
+blockquote, pre,
+ul, ol, dl, figure,
+%vertical-rhythm {
+    margin-bottom: 2em;
+    line-height: 1.5em;
+    @include media-query($on-palm) {
+        margin-bottom: 1em;
+    }
+}
+
+
+
+/**
+ * Images
+ */
+img {
+    max-width: 100%;
+    vertical-align: middle;
+    margin-bottom: 2em;
+    @include media-query($on-palm) {
+        margin-bottom: 1em;
+    }
+}
+
+
+
+/**
+ * Figures
+ */
+figure > img {
+    display: block;
+}
+
+figcaption {
+    font-size: $small-font-size;
+}
+
+
+
+/**
+ * Lists
+ */
+ul, ol {
+    margin-left: $spacing-unit;
+}
+
+li {
+    > ul,
+    > ol {
+         margin-bottom: 0;
+    }
+}
+
+
+/**
+ * Blockquotes
+ */
+blockquote {
+    color: $grey-color;
+    border-left: 4px solid $grey-color-light;
+    padding-left: $spacing-unit / 2;
+    font-size: 18px;
+    letter-spacing: -1px;
+    font-style: italic;
+
+    > :last-child {
+        margin-bottom: 0;
+    }
+}
+
+.line-by {
+    padding: 4% 2% 4% 2%;
+    background-color: #fff;
+    @include media-query($on-palm) {
+        padding: 2% 1% 2% 1%;
+        background-color: #fff;
+    }
+}
+
+
+/**
+ * Code formatting
+ */
+pre,
+code {
+ 
+    font-size: 15px;
+    border: 1px solid $brand-color;
+    border-radius: 3px;
+    background-color: transparent;
+    display: inline-block;
+    max-width: 100%;
+    text-shadow: 0px 1px 1px;
+
+    @include media-query($on-palm) {
+    max-width: 92%;
+    }
+   
+}
+
+
+code {
+    padding: 0px 5px;
+
+}
+
+pre {
+    padding: 8px 12px;
+    overflow-x: scroll;
+
+    > code {
+        border: 0;
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+/**
+ * Clearfix
+ */
+%clearfix {
+
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+
+
+/**
+ * Icons
+ */
+.icon {
+
+    > svg {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        vertical-align: middle;
+
+        path {
+            fill: $grey-color;
+        }
+    }
+}
+
+
+
+
+
+#post-title {
+    font-family: $head-font-family;
+    font-size: 4em;
+    font-family: inherit;
+    font-weight: 600;
+    letter-spacing: -1px;
+    text-align: center;
+    color: $brand-color;
+    -webkit-transition-delay: 0.2s;
+    transition-duration: 0.2s;
+    transition-property:all;
+    @include media-query($on-palm) {
+        font-size: 2em;
+    }
+}
+
+h1.post-title {
+    border-bottom: 1px solid #eee;
+    line-height: 2;
+    font-size: 4em;
+    
+    @include media-query($on-palm) {
+            border-bottom: 1px solid #eee;
+            line-height: 1.5;
+            font-size: 2em;
+    }
+}
+
+#post-title:hover {
+    color: $highlight-color;
+}
+
+strong, b {
+        font-weight: 600;
+        letter-spacing: 1px;
+}
+
