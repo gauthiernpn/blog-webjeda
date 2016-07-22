@@ -14,7 +14,7 @@ layout: default
             <span class="time-auth"><time itemprop="datePublished" datetime="{{ page.date | date_to_xmlschema }}" class="by-line" >{{ page.date | date_to_string }}</time>&#44;&nbsp;&nbsp;<div class="post-view" id="ga-pageviews"></div></span> 
             {% include post-tags.html %}	
             <div itemprop="articleBody" class="content" >
-
+                    {{ content }}
             </div>
             </article>	
             {% include share.html %}
@@ -44,17 +44,8 @@ layout: default
              </div>
 </div>
                <!-- JQuery -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 
-<script>
-    $(window).scroll(function() {
-    if ($(this).scrollTop() > 500) {
-        $('#go-top').fadeIn();
-    } else {
-        $('#go-top').fadeOut();
-    }
-});
-</script>
+
 {% include ga_data_fetch.html %}
 
 
