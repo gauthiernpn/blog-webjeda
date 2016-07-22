@@ -11,7 +11,7 @@ layout: default
 
             <a itemprop="url" class="post-link" href="{{ site.url }}{{ page.url }}"><h2 itemprop="headline" id="post-title">{{ page.title }}</h2></a>
 
-            <span class="time-auth"><time itemprop="datePublished" datetime="{{ page.date | date_to_xmlschema }}" class="by-line" >{{ page.date | date_to_string }}</time>&#44;&nbsp;&nbsp;<div class="post-view" id="ga-pageviews"></div></span> 
+            <span class="time-auth"><time itemprop="datePublished" datetime="{{ page.date | date_to_xmlschema }}" class="by-line" >{{ page.date }}</time>&#44;&nbsp;&nbsp;<div class="post-view" id="ga-pageviews"></div></span> 
             {% include post-tags.html %}	
             <div itemprop="articleBody" class="content" >
                     {{ content }}
@@ -59,4 +59,4 @@ layout: default
 {% include ga_data_fetch.html %}
 
 
-
+<script defer="defer" src="//load.sumome.com/" data-sumo-site-id="dec2f5872eb578a8dc528768e57e31d20af5bf9e5fffdc1da6241fe254e00bc2" ></script>
