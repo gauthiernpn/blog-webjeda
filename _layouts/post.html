@@ -1,0 +1,61 @@
+---
+layout: default
+---
+
+  
+<div class="page-content">
+    <br />
+                 {% include adsense-pt.html %} 
+    <div class="line-by adsense adsbygoogle">
+        <article itemscope itemtype="http://schema.org/TechArticle"  id="post-page" >
+
+            <a itemprop="url" class="post-link" href="{{ site.url }}{{ page.url }}"><h2 itemprop="headline" id="post-title">{{ page.title }}</h2></a>
+
+            <span class="time-auth"><time itemprop="datePublished" datetime="{{ page.date | date_to_xmlschema }}" class="by-line" >{{ page.date | date_to_string }}</time>&#44;&nbsp;&nbsp;<div class="post-view" id="ga-pageviews"></div></span> 
+            {% include post-tags.html %}	
+            <div itemprop="articleBody" class="content" >
+                    {{ content }}
+            </div>
+            </article>	
+            {% include share.html %}
+            
+            <br />
+            <br />
+
+
+
+
+
+            
+            <div class="clear"></div>
+            
+   
+            <br />
+            <a href="#top" ><div id="go-top"><span class="hint--top hint--bounce" data-hint="Go to top"><img class="gotop" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAlCAMAAAB1cTk3AAAC1lBMVEX//////////////v///////P3/////////////9/r/////9vr/////9Pj/////////////7/X/////////6/L/6/L/6vH//////////////////P3//////////////////////v/////////////////////+1+T+1uP////////////////+0uH/8/f//////////P3//v7////////+zd3//f79ydr/+Pv9xtn/7/X9wtb+7vP9u9H+6fD+6O/+5e3+4+z+5O38ssv8scr7sMn9zd38q8b7qsX91eP91+P7pcL91OL7ob/7nr39y9z9zd37nLz8xNf8tc36k7X5j7L8wtX7qcT6jbL6i7D6ia/7t836h636iK77sMn7ts35gan5h637scr5fqj4f6j7rcf6qcT5eqT5eaT7psL4dKD5pcH6n734b536m7r6mLn6lrf4kbP3YpT3YpT2XpH5i7D4iK34ia71Uoj5hKv2UYj4gKj3Wo72SoP4fqb4fab3d6L1R4H4dqH3eKL4dKD2RoH2S4T2a5n1P3z4cJ31Pnv4bZv3aZn3apn0OHf3Z5f3aJf3Zpb0NHT3ZJX2XZD3XpHzK272XpD0LnD2Wo73XZDzK270LG/3XI/zMnPzJmvzJ2vzJGr1VYrzI2j2UYf2T4bzHWT2TobzG2P2TYXyG2P1SYL2S4T2SoPxA1LxB1XxClfxC1jxDVryCljyC1jyC1nyDFnyDVnyDVryDlryDlvyD1vyD1zyEFvyEFzyEV3yEl3yEl7yE13yE17yFF7yFF/yFV/yFl/yFmDyF2HyGGHzF2HzGGHzGGLzGWLzG2TzHGTzHWXzHmbzH2bzH2f0NnX0OHb0Pnr0Pnv1O3n1PHn1PHr1PXr1Pnv1P3v1P3z1QHz1QH31QX31Q371Q3/1RH71RH/1RX/1RYD1RoD2Q3/2RH/2RYD2RoD2RoH2R4H2R4L2SIHr7VxGAAAArnRSTlMAAQIDBAUGCAkKCgsLDQ8REhMTFhcYGRobHB4gICEiIyQlJikqKywtLi4vMDEzMzM0NTY2Nzg4Ozw+QkNDS0xNTk9QVVZXWlxdYGFjZGhrbGxucnN2eHl6f4GChIWFhoaLi4uMjY2QlJWVl5mbnqKmp6msra+ytLS4u72+v8TFxsjKysvLzc/S09PU1dfY2tzc3d7e4+Pl5ufn5+np6e3v7/Hx8vP09vb39/j7/P1YsIwFAAACJElEQVQokWXS91cTQRAH8DVqbNhFQSUqcCoETTRi72Lvvffee+8dsffee0dNMMSS6CUo5jYaKwFiLheN4Mmu/gfe3uWSiPPj5+2+me+bAUCuySPBfzXpWc7Q4jY4/S33o8e/1uQG7eS5401LhOOax4yT/+1aULdMyLoZGbuTxz+vdopTBnG9CRLErnlUNdnaWOwiIu5o61oyztFDCRE7MDpgFQ69CCDOXRSjkLAVbQ++3JMU6DTsEZTRf71jeQmXGIOIvIMqiVYyzSyg9RWL/2CcP6W6iDXOZ0GYeXnHKc6PUe7C2iI2htnQtLSmotnE2zzKXx1bimA7M2NOLQeUiarZbuTekhBBMMUI9eMAUCYldLlbwO7WViHY1wD1Y0TsfKfAu79FFMEBBvh8e2mgVKumuxF3uGV9gv0NED6ZX1GROOImj7iDzSkStGcGhEzmmXUHfN8wYvdq1GUF7PCUEYa32DxYiOTZRmkrC5iclU1ivi8SAmHf2bZq0mm8iRHxF8mO85ZTQqdG14SUQURF7JAYAJZlOMIRc0fag140+RxChHNWgGM2KOGHACJuJ7j1pjh6N4HTr0OIfV8LhfnXgn026KAfvHQQZE9u/P6l0LMSbKat6SdGpd63fkTuK71j+23wf1oMVt27MLoqiJx58Z13V9d4DUX12ToXTJsVKS5lqsU1QaXV6nQNG9QB8kUOf/h5RpxOEx8VEXaj3c9dGlsvWpK/BiBcieYwSzsAAAAASUVORK5CYII=" width="20" height="37" alt="go to top"></span></div></a>
+            
+  
+            <div itemprop="comment" id="disqus_thread"></div>
+
+   
+    </div>
+    
+             <div class="error">
+             Using an ad-block may hide the content!
+             </div>
+</div>
+               <!-- JQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
+<script>
+    $(window).scroll(function() {
+    if ($(this).scrollTop() > 500) {
+        $('#go-top').fadeIn();
+    } else {
+        $('#go-top').fadeOut();
+    }
+});
+</script>
+{% include ga_data_fetch.html %}
+
+
+<script defer="defer" src="//load.sumome.com/" data-sumo-site-id="dec2f5872eb578a8dc528768e57e31d20af5bf9e5fffdc1da6241fe254e00bc2" ></script>
