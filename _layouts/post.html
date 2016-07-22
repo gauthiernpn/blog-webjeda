@@ -11,7 +11,7 @@ layout: default
 
             <a itemprop="url" class="post-link" href="{{ site.url }}{{ page.url }}"><h2 itemprop="headline" id="post-title">{{ page.title }}</h2></a>
 
-            <span class="time-auth"><time itemprop="datePublished" class="by-line" >{{ page.date | date_to_string }}</time>&#44;&nbsp;&nbsp;<div class="post-view" id="ga-pageviews"></div></span> 
+            <span class="time-auth"><time >{{ page.date }}</time>&#44;&nbsp;&nbsp;<div class="post-view" id="ga-pageviews"></div></span> 
             
             
             {% include post-tags.html %}	
