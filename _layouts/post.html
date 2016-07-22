@@ -7,7 +7,16 @@ layout: default
     <br />
                  {% include adsense-pt.html %} 
     <div class="line-by adsense adsbygoogle">
-        
+        <article itemscope itemtype="http://schema.org/TechArticle"  id="post-page" >
+
+         
+
+            <span class="time-auth"><time itemprop="datePublished" datetime="{{ page.date | date_to_xmlschema }}" class="by-line" >{{ page.date | date_to_string }}</time>&#44;&nbsp;&nbsp;<div class="post-view" id="ga-pageviews"></div></span> 
+            {% include post-tags.html %}	
+            <div itemprop="articleBody" class="content" >
+                    {{ content }}
+            </div>
+            </article>	
             {% include share.html %}
             
             <br />
