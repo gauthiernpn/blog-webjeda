@@ -9,9 +9,9 @@ layout: default
     <div class="line-by adsense adsbygoogle">
         <article itemscope itemtype="http://schema.org/TechArticle"  id="post-page" >
 
-         
+            <a itemprop="url" class="post-link" href="{{ site.url }}{{ page.url }}"><h2 itemprop="headline" id="post-title">{{ page.title }}</h2></a>
 
-            <span class="time-auth"><time itemprop="datePublished" datetime="{{ page.date | date_to_xmlschema }}" class="by-line" >{{ page.date | date_to_string }}</time>&#44;&nbsp;&nbsp;<div class="post-view" id="ga-pageviews"></div></span> 
+           
             {% include post-tags.html %}	
             <div itemprop="articleBody" class="content" >
                     {{ content }}
