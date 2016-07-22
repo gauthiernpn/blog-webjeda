@@ -11,7 +11,9 @@ layout: default
 
             <a itemprop="url" class="post-link" href="{{ site.url }}{{ page.url }}"><h2 itemprop="headline" id="post-title">{{ page.title }}</h2></a>
 
-           
+            <span class="time-auth">&#44;&nbsp;&nbsp;<div class="post-view" id="ga-pageviews"></div></span> 
+            
+            
             {% include post-tags.html %}	
             <div itemprop="articleBody" class="content" >
                     {{ content }}
